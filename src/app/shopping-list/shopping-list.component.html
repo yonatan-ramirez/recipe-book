@@ -3,5 +3,13 @@
       <shopping-edit></shopping-edit>
       <hr>
       <p>The List</p>
+      <!--ancher tag with class list-group-item-->
+      <!--loop through ingredients -->
+      <!--display name  amount-->
+      <a href="#" class="list-group-item" *ngFor="let ingredient of ingredients">
+        {{ingredient.name}} {{ingredient.amount}}
+        <p></p>
+      </a>
+
     </div>
   </div>
