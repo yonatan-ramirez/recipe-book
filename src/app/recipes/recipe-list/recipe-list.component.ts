@@ -7,8 +7,7 @@ import { Recipe } from '../recipe.model';
   styleUrls: ['./recipe-list.component.css']
 })
 export class RecipeListComponent implements OnInit {
-  abc: number;
-
+ 
   recipes: Recipe[] = [{
     name: 'A new recipe',
     description: 'test recipe',
