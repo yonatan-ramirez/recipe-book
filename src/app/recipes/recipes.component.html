@@ -3,7 +3,7 @@
   <recipe-list (recipeSelected)="displayRecipe($event)"></recipe-list>
   </div>
   <div class="col-md-7">
-  <recipe-detail *ngIf="selectedRecipel else noRecipe" (recipe)="selectedRecipe()"></recipe-detail>
+  <recipe-detail *ngIf="selectedRecipe else noRecipe" (recipe)="selectedRecipe"></recipe-detail>
   <ng-template #noRecipe>
   <p>Select a Recipe</p>
     </ng-template>
