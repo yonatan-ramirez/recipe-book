@@ -11,7 +11,6 @@ import { Recipe } from '../../recipe.model';
 export class RecipeItemComponent implements OnInit {
 
   @Input() recipe: Recipe;
-  @Output() recipeWasSelected = new EventEmitter<Recipe>();
 
   constructor(private recipeService: RecipeService) { }
 
@@ -19,6 +18,6 @@ export class RecipeItemComponent implements OnInit {
   }
 
   selectedRecipe() {
-    this.recipeService.recipeSelected.emit();
+    this.recipeService.recipeSelected.emit(this.recipe);
   }
 }

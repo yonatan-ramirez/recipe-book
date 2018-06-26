@@ -11,15 +11,16 @@ import { Ingredient } from '../../shared/ingredient.model';
 export class ShoppingEditComponent implements OnInit {
   @ViewChild('nameInput') nameInputRef: ElementRef;
   @ViewChild('amountInput') amountInputRef: ElementRef;
-  constructor() { }
+
+  constructor(private shoppingListService: ShoppingListService) { }
 
   ngOnInit() {
   }
   addIngredient() {
-    const newIngredient =new Ingredient(
+    const newIngredient = new Ingredient(
     this.nameInputRef.nativeElement.value,
     this.amountInputRef.nativeElement.value,
     );
-    this.ShoppingListService.addIngredient(newIngredient);
+    this.shoppingListService.addIngredient(newIngredient);
   }
 }

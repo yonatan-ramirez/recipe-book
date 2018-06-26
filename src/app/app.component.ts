@@ -12,6 +12,6 @@ export class AppComponent {
 
   navigate(feature: string) {
 console.log('set new feature:', feature);
-this.loadedFeature = 'featrue';
+this.loadedFeature = feature;
   }
 }
