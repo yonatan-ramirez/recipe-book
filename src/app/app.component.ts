@@ -7,9 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
-  loadedFeature: string ='recipe';
-  navigate(feature:string){
+  // tslint:disable-next-line:no-inferrable-types
+  loadedFeature: string = 'recipe';
+
+  navigate(feature: string) {
 console.log('set new feature:', feature);
-this.loadedFeature ='featrue';
+this.loadedFeature = feature;
   }
 }
